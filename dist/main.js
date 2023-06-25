@@ -1,0 +1,1 @@
+console.log("Potato inside index.js");
