@@ -1,0 +1,53 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#header {
+    background-color: white;
+    border-bottom: 2px solid black;
+    height: 120px;
+    width: 100%;
+    padding: 0 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tab-container {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.tab {
+    background-color: beige;
+    height: 50px;
+    width: 130px;
+    padding: 4px 0 4px 0;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab:hover {
+    background-color: peru;
+    color: white;    
+}
+
+.select {
+    background-color: peru;
+    color: white;
+    height: calc(100% + 4px);
+    font-weight: 800;
+}
