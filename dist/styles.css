@@ -12,7 +12,7 @@ html {
 #header {
     background-color: white;
     border-bottom: 2px solid black;
-    height: 120px;
+    height: 100px;
     width: 100%;
     padding: 0 40px 0 30px;
     display: flex;
@@ -20,9 +20,14 @@ html {
     align-items: center;
 }
 
+#logo {
+    white-space: nowrap;
+}
+
 #tab-container {
     background-color: white;
     height: 100%;
+    padding-left: 40px;
     display: flex;
     align-items: center;
     gap: 28px;
@@ -50,4 +55,14 @@ html {
     color: white;
     height: calc(100% + 4px);
     font-weight: 800;
+}
+
+.main {
+    background-color: beige;
+}
+
+#home-img {
+    width: 100%;
+    height: 400px;
+    object-fit: none;
 }
