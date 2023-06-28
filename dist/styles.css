@@ -9,11 +9,17 @@ html {
     font-family: sans-serif;
 }
 
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 #header {
     background-color: white;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid peru;
     height: 100px;
-    width: 100%;
+    width: 100vw;
     padding: 0 40px 0 30px;
     display: flex;
     justify-content: space-between;
@@ -53,16 +59,76 @@ html {
 .select {
     background-color: peru;
     color: white;
-    height: calc(100% + 4px);
+    height: 100%;
     font-weight: 800;
 }
 
 .main {
     background-color: beige;
+    width: 100vw;
+    flex: 1;
 }
 
-#home-img {
-    width: 100%;
+#hero-container {
+    position: relative;
     height: 400px;
-    object-fit: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-container::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background: url(./assets/benjamin-davies-field-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(70%);
+}
+
+#hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#hero-title {
+    font-size: 38px;
+    font-weight: 900;
+}
+
+#hero-subtitle {
+    margin-top: 10px;
+    font-weight: 400;
+}
+#hero-button {
+    background-color: rgb(95, 207, 207);
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-top: 20px;
+    padding: 8px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#hero-button:hover {
+    background-color: peru;
+    color: white;
+}
+
+#home-mid {
+    background-color: peru;
+    border-radius: 4px;
+    box-shadow: 0 4px 2px gray;
+    color: white;
+    margin: 50px;
+    padding: 20px 80px;
+    font-size: 20px;
 }
