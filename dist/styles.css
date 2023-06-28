@@ -67,6 +67,9 @@ html {
     background-color: beige;
     width: 100vw;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #hero-container {
@@ -118,17 +121,21 @@ html {
     cursor: pointer;
 }
 
-#hero-button:hover {
-    background-color: peru;
-    color: white;
-}
-
-#home-mid {
+.strip {
     background-color: peru;
     border-radius: 4px;
     box-shadow: 0 4px 2px gray;
     color: white;
     margin: 50px;
-    padding: 20px 80px;
+    padding: 26px 60px;
     font-size: 20px;
+}
+
+#menu-title {
+    margin: 40px;
+}
+
+#menu-board {
+    background-color: white;
+    border-radius: 10px;
 }
