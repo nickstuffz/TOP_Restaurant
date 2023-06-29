@@ -11,6 +11,7 @@ function initializePage() {
 }
 
 function loadHeader() {
+    const content = document.getElementById('content')
     const header = document.createElement('div');
     const logo = document.createElement('div');
     const logo_h1 = document.createElement('h1');
