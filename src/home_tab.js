@@ -1,6 +1,4 @@
-function loadHome () {
-    const content = document.getElementById('content');
-
+function loadHome() {
     const home_container = document.createElement('div');
     const hero_container = document.createElement('div');
     const hero_content = document.createElement('div');
@@ -34,5 +32,39 @@ function loadHome () {
     home_container.append(hero_container, home_mid);
     hero_container.append(hero_content);
     hero_content.append(hero_title, hero_subtitle, hero_button);
-    home_mid.append(mid_strip);
+    home_mid.append(mid_strip);   
+
+    return;
 }
+
+export default loadHome
+
+{/* 
+
+<div class="main" id="home-container">
+
+    <div id="hero-container">
+        <div id="hero-content">
+            <h1 id="hero-title">
+                Welcome to Slop Shop
+            </h1>
+            <h2 id="hero-subtitle">
+                your one stop shop for yummy slop!
+            </h2>
+            <button id="hero-button" type="button">
+                peruse Menu >>
+            </button>
+        </div>
+    </div>
+
+    <div id="home-mid">
+        <div class="strip">
+            Here at Slop Stop we love slop. Slop is so delicious and 
+            wonderful I do not know why anybody would eat anything else. We 
+            serve a large variety of slop from all around the world. Eat up!
+        </div>
+    </div>
+    
+</div>
+
+*/}

@@ -1,6 +1,8 @@
-function loadHeader() {
-    const content = document.getElementById('content');
+import loadHome from './home_tab.js'
+import loadMenu from './menu_tab.js'
+import loadContact from './contact_tab.js'
 
+function loadHeader() {
     const header = document.createElement('div');
     const logo = document.createElement('div');
     const logo_h1 = document.createElement('h1');
@@ -29,34 +31,45 @@ function loadHeader() {
     header.append(logo, tab_container);
     logo.append(logo_h1);
     tab_container.append(tab_home, tab_menu, tab_contact);
+
+    return;
 }
 
-
-
-
-
-// <div class="main" id="home-container">
-
-//     <div id="hero-container">
-//         <div id="hero-content">
-//             <h1 id="hero-title">
-//                 Welcome to Slop Shop
-//             </h1>
-//             <h2 id="hero-subtitle">
-//                 your one stop shop for yummy slop!
-//             </h2>
-//             <button id="hero-button" type="button">
-//                 peruse Menu >>
-//             </button>
-//         </div>
-//     </div>
+function loadClicks() {
+    const tab_home = document.getElementById('tab-home');
+    const tab_menu = document.getElementById('tab-menu');
+    const tab_contact = document.getElementById('tab-contact');
     
-//     <div id="home-mid">
-//         <div class="strip">
-//             Here at Slop Stop we love slop. Slop is so delicious and 
-//             wonderful I do not know why anybody would eat anything else. We 
-//             serve a large variety of slop from all around the world. Eat up!
-//         </div>
-//     </div>
-        
-// </div>
+    tab_home.addEventListener('click', () => {
+        clearMain();
+        loadHome();
+        return;
+    });
+    
+    tab_menu.addEventListener('click', () => {
+        clearMain();
+        loadMenu();
+        return;
+    });
+    
+    tab_contact.addEventListener('click', () => {
+        clearMain();
+        loadContact();
+        return;
+    });
+}
+
+function clearMain() {
+    document.querySelectorAll('.main').forEach(el => el.remove());
+
+    return;
+}
+
+function tabSelect(tab) {
+
+    tab.classList.add('select');
+
+    return;
+}
+
+export {loadHeader, loadClicks, tabSelect}

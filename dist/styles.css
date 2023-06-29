@@ -53,7 +53,8 @@ html {
 
 .tab:hover {
     background-color: peru;
-    color: white;    
+    color: white;
+    cursor: pointer;
 }
 
 .select {
