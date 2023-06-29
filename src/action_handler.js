@@ -2,6 +2,14 @@ import loadHome from './home_tab.js'
 import loadMenu from './menu_tab.js'
 import loadContact from './contact_tab.js'
 
+function initializePage() {
+    loadHeader();
+    loadHome();
+    loadClicks();
+    tabSelect('tab-home');
+    return;
+}
+
 function loadHeader() {
     const header = document.createElement('div');
     const logo = document.createElement('div');
@@ -40,23 +48,30 @@ function loadClicks() {
     const tab_menu = document.getElementById('tab-menu');
     const tab_contact = document.getElementById('tab-contact');
     
-    tab_home.addEventListener('click', () => {
+    tab_home.addEventListener('click', Clicks.homeClick);
+    tab_menu.addEventListener('click', Clicks.menuClick);
+    tab_contact.addEventListener('click', Clicks.contactClick);
+}
+
+const Clicks = {
+    homeClick() {
+        tabSelect('tab-home');
         clearMain();
         loadHome();
         return;
-    });
-    
-    tab_menu.addEventListener('click', () => {
+    },
+    menuClick() {
+        tabSelect('tab-menu');
         clearMain();
         loadMenu();
         return;
-    });
-    
-    tab_contact.addEventListener('click', () => {
+    },
+    contactClick() {
+        tabSelect('tab-contact');
         clearMain();
         loadContact();
         return;
-    });
+    }
 }
 
 function clearMain() {
@@ -66,10 +81,13 @@ function clearMain() {
 }
 
 function tabSelect(tab) {
-
-    tab.classList.add('select');
+    document.querySelectorAll('.tab').forEach((el) => {
+        el.classList.remove('select');
+    });
+    const select = document.getElementById(tab);
+    select.classList.add('select');
 
     return;
 }
 
-export {loadHeader, loadClicks, tabSelect}
+export {initializePage, Clicks}
