@@ -23,7 +23,7 @@ function loadHome() {
     hero_button.setAttribute("type", "button");
 
     hero_title.innerText = 'Welcome to Slop Shop';
-    hero_subtitle.innerText = 'your one stop shop for yummu slop!';
+    hero_subtitle.innerText = 'your one stop shop for yummy slop!';
     hero_button.innerText = 'peruse Menu >>';
     mid_strip.innerText = 
 'Here at Slop Stop we love slop. Slop is so delicious and wonderful I do' +
